@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 
@@ -8,7 +11,12 @@ import { AppComponent } from './app.component';
   declarations: [
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserModule,
+    HttpClientModule,
+  ],
+  providers:[
+    
   ]
 })
 export class AppModule { }
