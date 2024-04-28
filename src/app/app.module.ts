@@ -1,19 +1,28 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './components/home/home/home.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { GoogleMapsModule } from '@angular/google-maps'
+import { HomeComponent } from './components/home/home.component';
+import { MapComponent } from './components/map/map.component';
+import { AppComponent } from './app.component';
 
 
 @NgModule({
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
+    HomeComponent,
+    MapComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    MatTableModule,
+    GoogleMapsModule,
   ],
   providers:[
     
